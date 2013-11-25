@@ -1,21 +1,32 @@
 //
-//  HMAppDelegate.m
-//  HelloMongo
+//  MMAppDelegate.m
+//  MongoMonitor
 //
-//  Created by Shuai Liu on 13-11-24.
+//  Created by Shuai Liu on 13-11-25.
 //  Copyright (c) 2013年 liushuaikobe. All rights reserved.
 //
 
-#import "HMAppDelegate.h"
+#import "MMAppDelegate.h"
+#import "MMMainViewController.h"
 
-@implementation HMAppDelegate
+@implementation MMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    MMMainViewController *mainViewController = [[MMMainViewController alloc] init];
+    
+    UINavigationController *navi = [[UINavigationController alloc] init];
+    self.window.rootViewController = navi;
+    navi.viewControllers = @[mainViewController];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -1,18 +1,18 @@
 //
-//  HelloMongoTests.m
-//  HelloMongoTests
+//  MongoMonitorTests.m
+//  MongoMonitorTests
 //
-//  Created by Shuai Liu on 13-11-24.
+//  Created by Shuai Liu on 13-11-25.
 //  Copyright (c) 2013年 liushuaikobe. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface HelloMongoTests : XCTestCase
+@interface MongoMonitorTests : XCTestCase
 
 @end
 
-@implementation HelloMongoTests
+@implementation MongoMonitorTests
 
 - (void)setUp
 {
