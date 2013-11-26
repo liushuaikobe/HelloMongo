@@ -7,7 +7,6 @@
 //
 
 #import "MMAppDelegate.h"
-#import "MMMainViewController.h"
 
 @implementation MMAppDelegate
 
@@ -16,12 +15,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+
+    NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"MainTabBar" owner:nil options:nil];
+    UITabBarController *controller =[nibContents objectAtIndex:0];
     
-    MMMainViewController *mainViewController = [[MMMainViewController alloc] init];
-    
-    UINavigationController *navi = [[UINavigationController alloc] init];
-    self.window.rootViewController = navi;
-    navi.viewControllers = @[mainViewController];
+    self.window.rootViewController = controller;
     
     [self.window makeKeyAndVisible];
     return YES;
