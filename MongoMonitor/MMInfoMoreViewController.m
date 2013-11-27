@@ -19,9 +19,23 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
+        UIBarButtonItem *rightSettingBtn = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(presentSettingsViewControler)];
+        self.navigationItem.rightBarButtonItem = rightSettingBtn;
+        
+        self.navigationItem.title = @"More";
+        
+        
     }
     return self;
 }
+
+- (void)presentSettingsViewControler
+{
+    UINavigationController *settingsNavagationController = [[UINavigationController alloc] initWithRootViewController:[[MMSettingsViewController alloc] init]];
+    [self.navigationController presentViewController:settingsNavagationController animated:YES completion:nil];
+}
+
 
 - (void)viewDidLoad
 {

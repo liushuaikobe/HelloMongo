@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B2C0DF51845C5E6003776CF /* MMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */; };
+		4B2C0DF61845C5E6003776CF /* MMSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */; };
 		4B328A9C1843385000FF084B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B328A9B1843385000FF084B /* Foundation.framework */; };
 		4B328A9E1843385000FF084B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B328A9D1843385000FF084B /* CoreGraphics.framework */; };
 		4B328AA01843385000FF084B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B328A9F1843385000FF084B /* UIKit.framework */; };
@@ -19,10 +21,6 @@
 		4B328AB71843385100FF084B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B328A9F1843385000FF084B /* UIKit.framework */; };
 		4B328ABF1843385100FF084B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B328ABD1843385100FF084B /* InfoPlist.strings */; };
 		4B328AC11843385100FF084B /* MongoMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B328AC01843385100FF084B /* MongoMonitorTests.m */; };
-		4B328ACD1843397300FF084B /* MMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B328ACB1843397300FF084B /* MMMainViewController.m */; };
-		4B328ACE1843397300FF084B /* MMMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B328ACC1843397300FF084B /* MMMainViewController.xib */; };
-		4B328AD21843407800FF084B /* MMStatusItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B328AD01843407800FF084B /* MMStatusItemViewController.m */; };
-		4B328AD31843407800FF084B /* MMStatusItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B328AD11843407800FF084B /* MMStatusItemViewController.xib */; };
 		4BB3AC081844620D008E8538 /* MainTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3AC071844620D008E8538 /* MainTabBar.xib */; };
 		4BB3AC0C18446726008E8538 /* MMInfoServerStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3AC0A18446726008E8538 /* MMInfoServerStatusViewController.m */; };
 		4BB3AC0D18446726008E8538 /* MMInfoServerStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3AC0B18446726008E8538 /* MMInfoServerStatusViewController.xib */; };
@@ -45,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B2C0DF21845C5E6003776CF /* MMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingsViewController.h; sourceTree = "<group>"; };
+		4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingsViewController.m; sourceTree = "<group>"; };
+		4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMSettingsViewController.xib; sourceTree = "<group>"; };
 		4B328A981843385000FF084B /* MongoMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B328A9B1843385000FF084B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B328A9D1843385000FF084B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,12 +62,6 @@
 		4B328ABC1843385100FF084B /* MongoMonitorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MongoMonitorTests-Info.plist"; sourceTree = "<group>"; };
 		4B328ABE1843385100FF084B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B328AC01843385100FF084B /* MongoMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoMonitorTests.m; sourceTree = "<group>"; };
-		4B328ACA1843397300FF084B /* MMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMainViewController.h; sourceTree = "<group>"; };
-		4B328ACB1843397300FF084B /* MMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMainViewController.m; sourceTree = "<group>"; };
-		4B328ACC1843397300FF084B /* MMMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMMainViewController.xib; sourceTree = "<group>"; };
-		4B328ACF1843407800FF084B /* MMStatusItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMStatusItemViewController.h; sourceTree = "<group>"; };
-		4B328AD01843407800FF084B /* MMStatusItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMStatusItemViewController.m; sourceTree = "<group>"; };
-		4B328AD11843407800FF084B /* MMStatusItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMStatusItemViewController.xib; sourceTree = "<group>"; };
 		4BB3AC071844620D008E8538 /* MainTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTabBar.xib; sourceTree = "<group>"; };
 		4BB3AC0918446726008E8538 /* MMInfoServerStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMInfoServerStatusViewController.h; sourceTree = "<group>"; };
 		4BB3AC0A18446726008E8538 /* MMInfoServerStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMInfoServerStatusViewController.m; sourceTree = "<group>"; };
@@ -143,12 +138,6 @@
 				4B328AAB1843385000FF084B /* MMAppDelegate.m */,
 				4B328AAD1843385000FF084B /* Images.xcassets */,
 				4B328AA21843385000FF084B /* Supporting Files */,
-				4B328ACA1843397300FF084B /* MMMainViewController.h */,
-				4B328ACB1843397300FF084B /* MMMainViewController.m */,
-				4B328ACC1843397300FF084B /* MMMainViewController.xib */,
-				4B328ACF1843407800FF084B /* MMStatusItemViewController.h */,
-				4B328AD01843407800FF084B /* MMStatusItemViewController.m */,
-				4B328AD11843407800FF084B /* MMStatusItemViewController.xib */,
 				4BB3AC071844620D008E8538 /* MainTabBar.xib */,
 				4BB3AC0918446726008E8538 /* MMInfoServerStatusViewController.h */,
 				4BB3AC0A18446726008E8538 /* MMInfoServerStatusViewController.m */,
@@ -162,6 +151,9 @@
 				4BB3AC1818446767008E8538 /* MMInfoMoreViewController.h */,
 				4BB3AC1918446767008E8538 /* MMInfoMoreViewController.m */,
 				4BB3AC1A18446767008E8538 /* MMInfoMoreViewController.xib */,
+				4B2C0DF21845C5E6003776CF /* MMSettingsViewController.h */,
+				4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */,
+				4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */,
 			);
 			path = MongoMonitor;
 			sourceTree = "<group>";
@@ -273,13 +265,12 @@
 			files = (
 				4B328AA61843385000FF084B /* InfoPlist.strings in Resources */,
 				4BB3AC0D18446726008E8538 /* MMInfoServerStatusViewController.xib in Resources */,
-				4B328ACE1843397300FF084B /* MMMainViewController.xib in Resources */,
 				4BB3AC121844673D008E8538 /* MMInfoDBViewController.xib in Resources */,
 				4B328AAE1843385000FF084B /* Images.xcassets in Resources */,
 				4BB3AC1718446752008E8538 /* MMInfoReplViewController.xib in Resources */,
 				4BB3AC1C18446767008E8538 /* MMInfoMoreViewController.xib in Resources */,
-				4B328AD31843407800FF084B /* MMStatusItemViewController.xib in Resources */,
 				4BB3AC081844620D008E8538 /* MainTabBar.xib in Resources */,
+				4B2C0DF61845C5E6003776CF /* MMSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,13 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B328ACD1843397300FF084B /* MMMainViewController.m in Sources */,
 				4B328AAC1843385000FF084B /* MMAppDelegate.m in Sources */,
 				4BB3AC0C18446726008E8538 /* MMInfoServerStatusViewController.m in Sources */,
 				4B328AA81843385000FF084B /* main.m in Sources */,
 				4BB3AC111844673D008E8538 /* MMInfoDBViewController.m in Sources */,
 				4BB3AC1B18446767008E8538 /* MMInfoMoreViewController.m in Sources */,
-				4B328AD21843407800FF084B /* MMStatusItemViewController.m in Sources */,
+				4B2C0DF51845C5E6003776CF /* MMSettingsViewController.m in Sources */,
 				4BB3AC1618446752008E8538 /* MMInfoReplViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMInfoMoreViewController.h"
+#import "MMSettingsViewController.h"
 
 @interface MMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+//@property (strong, nonatomic) UINavigationController *moreViewNavigationController;
+@property (strong, nonatomic) UITabBarController *mainTabBarController;
+
+- (void)initTabBars;
+
 
 @end

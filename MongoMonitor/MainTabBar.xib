@@ -45,7 +45,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="52j-pD-EUr" customClass="MMInfoMoreViewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="52j-pD-EUr" customClass="UINavigationController">
                     <tabBarItem key="tabBarItem" title="More" id="pbv-qb-lcB"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>

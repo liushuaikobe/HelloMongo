@@ -15,14 +15,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-
-    NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"MainTabBar" owner:nil options:nil];
-    UITabBarController *controller =[nibContents objectAtIndex:0];
     
-    self.window.rootViewController = controller;
+    // 从主tab的nib中将主TabBar加载
+    NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"MainTabBar" owner:nil options:nil];
+    self.mainTabBarController =[nibContents objectAtIndex:0];
+    // 初始化主TabBar
+    [self initTabBars];
+    
+    self.window.rootViewController = self.mainTabBarController;
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+// 初始化TabBarController
+- (void)initTabBars
+{
+    // "更多"tab下的NavigationController
+    UINavigationController *moreViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:3];
+    moreViewNavigationController.viewControllers = @[[[MMInfoMoreViewController alloc] init]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMSettingsViewController.h"
 
 @interface MMInfoMoreViewController : UIViewController
 
