@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MMInfoServerStatusViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *statusWebView;
+
+- (void)loadStatusFromLocalHtml:(NSString *)htmlFileName;
 
 @end

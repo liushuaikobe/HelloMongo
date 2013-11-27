@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMInfoServerStatusViewController.h"
 #import "MMInfoMoreViewController.h"
 #import "MMSettingsViewController.h"
 

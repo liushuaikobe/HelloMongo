@@ -31,6 +31,9 @@
 // 初始化TabBarController
 - (void)initTabBars
 {
+    // "serverStatus"下的NavigationController
+    UINavigationController *serverStatusViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:0];
+    serverStatusViewNavigationController.viewControllers = @[[[MMInfoServerStatusViewController alloc] init]];
     // "更多"tab下的NavigationController
     UINavigationController *moreViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:3];
     moreViewNavigationController.viewControllers = @[[[MMInfoMoreViewController alloc] init]];

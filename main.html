@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            <!-- 
+                .connections {
+                    background-color: orange;
+                    color: white;
+                }
+                .connections-label {
+                    font-size: 15px;
+                    font-style: italic;
+                }
+                .current-connections-num, th, tr {
+                    font-size: 50px;
+                }
+                .divider {
+                    background: white;
+                    height: 15px;
+                }
+                .lock {
+                    background-color: blue;
+                }
+                .mem {
+                    background: green;
+                }
+                .index {
+                    background: gray;
+                }
+                .opcounters {
+                    background: cyan;
+                }
+            -->
+        </style>
+    </head>
+    <body>
+        <div class="connections">
+            <div class="connections-label">connections</div>
+            <div class="current-connections-num">24 / 2048</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="lock">
+            <div class="connections-label">globalLock</div>
+            <div class="current-connections-num">12min / 15.6h</div>
+        </div>
+        <div class="divider"></div>
+        <div class="mem">
+            <div class="connections-label">memory(resident/mapped/virtual)</div>
+            <div class="current-connections-num">34 / 80 / 2687</div>
+        </div>
+        <div class="divider"></div>
+        <div class="index">
+            <div class="connections-label">index(hits / misses)</div>
+            <div class="current-connections-num">0 / 0</div>
+        </div>
+        <div class="divider"></div>
+        <div class="opcounters">
+            <div class="connections-label">opcounters</div>
+            <table border="1">
+                <tr>
+                    <th>C</th>
+                    <th>R</th>
+                    <th>U</th>
+                    <th>D</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>233</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

@@ -18,7 +18,7 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </tabBar>
             <viewControllers>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8UN-no-lqR" customClass="MMInfoServerStatusViewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8UN-no-lqR" customClass="UINavigationController">
                     <tabBarItem key="tabBarItem" title="Server" id="hF1-qJ-Lbi"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
