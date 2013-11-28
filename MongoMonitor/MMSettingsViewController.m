@@ -40,6 +40,26 @@
 
 - (void)save
 {
+    NSString *ipAddr = self.IPTextField.text;
+    NSString *port = self.portTextField.text;
+    
+    if (![MMUtils isRightIpAddress:ipAddr])
+    {
+        // 弹出对话框
+        return ;
+    }
+    else if (![MMUtils isRightPortNum:port])
+    {
+        // 弹出对话框
+        return ;
+    }
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:ipAddr forKey:[MMUtils get_ip_defaults_key]];
+    [userDefaults setObject:port forKey:[MMUtils get_port_defaults_key]];
+    
+
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -47,6 +67,15 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *ipAddr = (NSString *)[userDefaults objectForKey:[MMUtils get_ip_defaults_key]];
+    NSString *port = (NSString *)[userDefaults objectForKey:[MMUtils get_port_defaults_key]];
+    
+    if (ipAddr && port) {
+        self.IPTextField.text = ipAddr;
+        self.portTextField.text = port;
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -101,4 +101,28 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
+
+// 判断IP地址是否合法
++ (BOOL)isRightIpAddress:(NSString *)ipStr
+{
+    return YES;
+}
+
+// 判断一个端口号是否合法
++ (BOOL)isRightPortNum:(NSString *)portStr
+{
+    return YES;
+}
+
+// 返回类变量
++ (NSString *)get_ip_defaults_key
+{
+    return IP_DEFAULTS_KEY;
+}
+
++ (NSString *)get_port_defaults_key
+{
+    return PORT_DEFAULTS_KEY;
+}
+
 @end

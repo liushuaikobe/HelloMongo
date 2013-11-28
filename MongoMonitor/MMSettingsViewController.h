@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMUtils.h"
 
 @interface MMSettingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *IPTextField;

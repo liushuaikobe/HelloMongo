@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString* IP_DEFAULTS_KEY = @"db_ip_address";
+static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
+
 @interface MMUtils : NSObject
 
 + (NSString *)toNSString:(id)object;
@@ -18,5 +21,11 @@
 
 + (void)printDict:(NSDictionary *)dic;
 + (void)openUrlViaBrowser:(NSString *)url;
+
++ (BOOL)isRightIpAddress:(NSString *)ipStr;
++ (BOOL)isRightPortNum:(NSString *)portStr;
+
++ (NSString *)get_ip_defaults_key;
++ (NSString *)get_port_defaults_key;
 
 @end
