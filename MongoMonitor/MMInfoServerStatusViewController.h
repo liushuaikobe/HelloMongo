@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMUtils.h"
 
-@interface MMInfoServerStatusViewController : UIViewController
+@interface MMInfoServerStatusViewController : UIViewController <NSURLConnectionDelegate>
+
 @property (weak, nonatomic) IBOutlet UIWebView *statusWebView;
 
-- (void)loadStatusFromLocalHtml:(NSString *)htmlFileName;
+@property (retain) NSMutableData *buf;
+
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 
 @end

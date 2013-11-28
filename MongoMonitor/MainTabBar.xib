@@ -27,7 +27,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fzf-qg-Fd0" customClass="MMInfoDBViewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fzf-qg-Fd0" customClass="UINavigationController">
                     <tabBarItem key="tabBarItem" title="Database" id="Zyr-gv-1bb"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>

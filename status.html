@@ -29,7 +29,7 @@
                     background: gray;
                 }
                 .opcounters {
-                    background: cyan;
+                    background: fuchsia;
                 }
             -->
         </style>
@@ -37,22 +37,22 @@
     <body>
         <div class="connections">
             <div class="connections-label">connections</div>
-            <div class="current-connections-num">24 / 2048</h2>
+            <div class="current-connections-num">{{ current }} / {{ available }}</h2>
         </div>
         <div class="divider"></div>
         <div class="lock">
             <div class="connections-label">globalLock</div>
-            <div class="current-connections-num">12min / 15.6h</div>
+            <div class="current-connections-num">{{ lockTime }} / {{ totalTime }}</div>
         </div>
         <div class="divider"></div>
         <div class="mem">
             <div class="connections-label">memory(resident/mapped/virtual)</div>
-            <div class="current-connections-num">34 / 80 / 2687</div>
+            <div class="current-connections-num">{{ resident }} / {{ mapped }} / {{ virtual }}</div>
         </div>
         <div class="divider"></div>
         <div class="index">
-            <div class="connections-label">index(hits / misses)</div>
-            <div class="current-connections-num">0 / 0</div>
+            <div class="connections-label">index(hits / accesses)</div>
+            <div class="current-connections-num">{{ hits }} / {{ accesses }}</div>
         </div>
         <div class="divider"></div>
         <div class="opcounters">
@@ -65,10 +65,10 @@
                     <th>D</th>
                 </tr>
                 <tr>
-                    <td>0</td>
-                    <td>233</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td>{{ C }}</td>
+                    <td>{{ R }}</td>
+                    <td>{{ U }}</td>
+                    <td>{{ D }}</td>
                 </tr>
             </table>
         </div>

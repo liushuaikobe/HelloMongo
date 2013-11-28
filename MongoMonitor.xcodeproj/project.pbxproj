@@ -30,7 +30,8 @@
 		4BB3AC1718446752008E8538 /* MMInfoReplViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3AC1518446752008E8538 /* MMInfoReplViewController.xib */; };
 		4BB3AC1B18446767008E8538 /* MMInfoMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3AC1918446767008E8538 /* MMInfoMoreViewController.m */; };
 		4BB3AC1C18446767008E8538 /* MMInfoMoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3AC1A18446767008E8538 /* MMInfoMoreViewController.xib */; };
-		4BC710CD1846394300963077 /* main.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BC710CC1846394300963077 /* main.html */; };
+		4BC710CD1846394300963077 /* status.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BC710CC1846394300963077 /* status.html */; };
+		4BCC0463184724C90025EE3C /* MMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCC0462184724C90025EE3C /* MMUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,9 @@
 		4BB3AC1818446767008E8538 /* MMInfoMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMInfoMoreViewController.h; sourceTree = "<group>"; };
 		4BB3AC1918446767008E8538 /* MMInfoMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMInfoMoreViewController.m; sourceTree = "<group>"; };
 		4BB3AC1A18446767008E8538 /* MMInfoMoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMInfoMoreViewController.xib; sourceTree = "<group>"; };
-		4BC710CC1846394300963077 /* main.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = main.html; sourceTree = "<group>"; };
+		4BC710CC1846394300963077 /* status.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = status.html; sourceTree = "<group>"; };
+		4BCC0461184724C90025EE3C /* MMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUtils.h; sourceTree = "<group>"; };
+		4BCC0462184724C90025EE3C /* MMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +109,7 @@
 		4B328A8F1843385000FF084B = {
 			isa = PBXGroup;
 			children = (
-				4BC710CC1846394300963077 /* main.html */,
+				4BC710CC1846394300963077 /* status.html */,
 				4B328AA11843385000FF084B /* MongoMonitor */,
 				4B328ABA1843385100FF084B /* MongoMonitorTests */,
 				4B328A9A1843385000FF084B /* Frameworks */,
@@ -157,6 +160,8 @@
 				4B2C0DF21845C5E6003776CF /* MMSettingsViewController.h */,
 				4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */,
 				4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */,
+				4BCC0461184724C90025EE3C /* MMUtils.h */,
+				4BCC0462184724C90025EE3C /* MMUtils.m */,
 			);
 			path = MongoMonitor;
 			sourceTree = "<group>";
@@ -266,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BC710CD1846394300963077 /* main.html in Resources */,
+				4BC710CD1846394300963077 /* status.html in Resources */,
 				4B328AA61843385000FF084B /* InfoPlist.strings in Resources */,
 				4BB3AC0D18446726008E8538 /* MMInfoServerStatusViewController.xib in Resources */,
 				4BB3AC121844673D008E8538 /* MMInfoDBViewController.xib in Resources */,
@@ -300,6 +305,7 @@
 				4BB3AC1B18446767008E8538 /* MMInfoMoreViewController.m in Sources */,
 				4B2C0DF51845C5E6003776CF /* MMSettingsViewController.m in Sources */,
 				4BB3AC1618446752008E8538 /* MMInfoReplViewController.m in Sources */,
+				4BCC0463184724C90025EE3C /* MMUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MMInfoServerStatusViewController.h"
 #import "MMInfoMoreViewController.h"
+#import "MMInfoDBViewController.h"
 #import "MMSettingsViewController.h"
 
 @interface MMAppDelegate : UIResponder <UIApplicationDelegate>
