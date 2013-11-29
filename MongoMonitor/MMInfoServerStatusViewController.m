@@ -35,28 +35,20 @@
     return self;
 }
 
-// 用浏览器直接访问serverStatus
+// 用浏览器直接访问serverStatusd
 - (void)goSafari
 {
-    NSString *urlStr = [[NSString alloc] initWithFormat:@"http://%@:%@/serverStatus?text=1", @"127.0.0.1", @"28017"];
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@/serverStatus?text=1", [MMUtils getUrlBase]];
     [MMUtils openUrlViaBrowser:urlStr];
 }
 
 // 刷新当前数据
 - (void)refresh
 {
-    NSString *url = [[NSString alloc] initWithFormat:@"http://%@:%@/serverStatus", @"127.0.0.1", @"28017"];
+    NSString *url = [[NSString alloc] initWithFormat:@"%@/serverStatus", [MMUtils getUrlBase]];
     NSLog(@"Request: %@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection connectionWithRequest:request delegate:self];
-}
-
-// 解析ServerStatus的数据
-- (NSDictionary *)parseJson:(NSData *)jsonData
-{
-    NSError *error;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
-    return dic;
 }
 
 // 加载html模板
@@ -93,7 +85,7 @@
     return newStr;
 }
 
-// NSURLConnectionDelegate的方法
+#pragma mark - NSURLConnectionDelegate
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     NSLog(@"Get Responese.");
@@ -110,7 +102,7 @@
 {
     NSLog(@"Request Finished.");
     // 解析数据
-    NSDictionary *data = [self parseJson:self.buf];
+    NSDictionary *data = [MMUtils parseJson:self.buf];
     
 //    [MMUtils printDict:data];
     

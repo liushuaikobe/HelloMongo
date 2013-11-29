@@ -17,7 +17,10 @@ static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
 
 + (NSString *)formatHumanTime:(id)microsecond;
 + (NSString *)formatHumanSize:(id)mb;
++ (NSString *)formatHumanSizeBytes:(id)bytes;
 + (NSString *)formatHumanNumber:(id)number;
+
++ (NSDictionary *)parseJson:(NSData *)jsonData;
 
 + (void)printDict:(NSDictionary *)dic;
 + (void)openUrlViaBrowser:(NSString *)url;
@@ -27,5 +30,6 @@ static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
 
 + (NSString *)get_ip_defaults_key;
 + (NSString *)get_port_defaults_key;
++ (NSString *)getUrlBase;
 
 @end

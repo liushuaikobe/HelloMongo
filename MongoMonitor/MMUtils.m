@@ -63,6 +63,25 @@
     }
 }
 
+// 将字节转为对人友好的大小
++ (NSString *)formatHumanSizeBytes:(id)bytes
+{
+    int B = [[MMUtils toNSString:bytes] intValue];
+    
+    if (B < 1000) // bytes
+    {
+        return [[NSString alloc] initWithFormat:@"%dB", B];
+    }
+    else if (B < 1024 * 1024) // MB
+    {
+        return [[NSString alloc] initWithFormat:@"%.2fM", ((double)B)/ (1024.0 * 1024.0)];
+    }
+    else // GB
+    {
+        return [[NSString alloc] initWithFormat:@"%.2fG", ((double)B)/ (1024.0 * 1024.0 * 1024.0)];
+    }
+}
+
 
 // 将数字转为对人友好的表示方法
 + (NSString *)formatHumanNumber:(id)number
@@ -81,6 +100,14 @@
     {
         return [[NSString alloc] initWithFormat:@"%.2fM", ((double) num) / 1000000.0];
     }
+}
+
+// 解析ServerStatus的数据
++ (NSDictionary *)parseJson:(NSData *)jsonData
+{
+    NSError *error;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:&error];
+    return dic;
 }
 
 // 将一个字典以NSLog的形式打印
@@ -123,6 +150,20 @@
 + (NSString *)get_port_defaults_key
 {
     return PORT_DEFAULTS_KEY;
+}
+
+// 获取数据库的主机名+端口号
++ (NSString *)getUrlBase
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *ipAddr = (NSString *)[userDefaults objectForKey:[MMUtils get_ip_defaults_key]];
+    NSString *port = (NSString *)[userDefaults objectForKey:[MMUtils get_port_defaults_key]];
+    
+    if (ipAddr && port) {
+        return [[NSString alloc] initWithFormat:@"http://%@:%@", ipAddr, port];
+    }
+    return nil;
 }
 
 @end
