@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "MMSettingsViewController.h"
 
-@interface MMInfoMoreViewController : UIViewController
+@interface MMInfoMoreViewController : UIViewController<NSURLConnectionDelegate>
+    
+@property (weak, nonatomic) IBOutlet UIWebView *moreInfoWebView;
+    
+@property (retain) NSMutableData *buf;
+    
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error;
 
 @end

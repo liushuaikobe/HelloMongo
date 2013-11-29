@@ -24,6 +24,8 @@ static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
 
 + (void)printDict:(NSDictionary *)dic;
 + (void)openUrlViaBrowser:(NSString *)url;
+    
++ (NSString *)loadHtmlTemplate:(NSString *)htmlFileName;
 
 + (BOOL)isRightIpAddress:(NSString *)ipStr;
 + (BOOL)isRightPortNum:(NSString *)portStr;

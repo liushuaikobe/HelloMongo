@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <link rel="stylesheet" type="text/css" class="ui" href="semantic.min.css">
+            <style type="text/css">
+                <!--
+                p {
+                    font-family: 'Noteworthy-Bold';
+                }
+                </style>
+            </head>
+    <body>
+        <div class="ui raised segment">
+            <div class="ui ribbon label">system</div>
+                <div class="ui top attached segment">
+                    <p>hostname : {{ hostname }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>CpuAddrSize : {{ cpuAddrSize }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>MemSize : {{ memSizeMB }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>CoreNum : {{ numCores }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>CpuArch : {{ cpuArch }}</p>
+                </div>
+                <div class="ui bottom attached segment">
+                    <p>NumaEnabled : {{ numaEnabled }}</p>
+                </div>
+            
+            <div class="ui ribbon label">os</div>
+                <div class="ui top attached segment">
+                    <p>type : {{ type }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>name : {{ name }}</p>
+                </div>
+                <div class="ui bottom attached segment">
+                    <p>version : {{ version }}</p>
+                </div>
+            
+            <div class="ui ribbon label">extra</div>
+                <div class="ui segment">
+                    <p>PageSize : {{ pageSize }}</p>
+                </div>
+                <!--
+                <div class="ui top attached segment">
+                    <p>PhysicalCores : {{ physicalCores }}</p>
+                </div>
+                <div class="ui attached segment">
+                    <p>CpuString : {{ cpuString }}</p>
+                </div>
+                <div class="ui bottom attached segment">
+                    <p>scheduler : {{ scheduler }}</p>
+                </div>
+                 -->
+        </div>
+    </body>
+</html>

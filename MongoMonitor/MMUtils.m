@@ -24,8 +24,8 @@
     
 //    NSLog(@"%f", s);
     
-    if (s < 60)
-    { // 秒
+    if (s < 60) // 秒
+    {
         return [[NSString alloc] initWithFormat:@"%.2fs", s];
     }
     else if (s < 3600) // 分钟
@@ -72,7 +72,11 @@
     {
         return [[NSString alloc] initWithFormat:@"%dB", B];
     }
-    else if (B < 1024 * 1024) // MB
+    else if (B < 1024 * 1024) // KB
+    {
+        return [[NSString alloc] initWithFormat:@"%.2fK", ((double)B)/ (1024.0)];
+    }
+    else if (B < 1024 * 1024 * 1024) // MB
     {
         return [[NSString alloc] initWithFormat:@"%.2fM", ((double)B)/ (1024.0 * 1024.0)];
     }
@@ -126,6 +130,14 @@
 + (void)openUrlViaBrowser:(NSString *)url
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
+
+// 加载html模板
++ (NSString *)loadHtmlTemplate:(NSString *)htmlFileName
+{
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:htmlFileName ofType:@"html"];
+    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    return htmlString;
 }
 
 

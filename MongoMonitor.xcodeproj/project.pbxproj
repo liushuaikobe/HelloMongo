@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B265DC61848D835002A9355 /* semantic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B265DC51848D835002A9355 /* semantic.min.css */; };
+		4B265DC81848EC83002A9355 /* hosts.html in Resources */ = {isa = PBXBuildFile; fileRef = 4B265DC71848EC83002A9355 /* hosts.html */; };
 		4B2C0DF51845C5E6003776CF /* MMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */; };
 		4B2C0DF61845C5E6003776CF /* MMSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */; };
 		4B328A9C1843385000FF084B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B328A9B1843385000FF084B /* Foundation.framework */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4B265DC51848D835002A9355 /* semantic.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = semantic.min.css; sourceTree = "<group>"; };
+		4B265DC71848EC83002A9355 /* hosts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = hosts.html; sourceTree = "<group>"; };
 		4B2C0DF21845C5E6003776CF /* MMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingsViewController.h; sourceTree = "<group>"; };
 		4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSettingsViewController.m; sourceTree = "<group>"; };
 		4B2C0DF41845C5E6003776CF /* MMSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMSettingsViewController.xib; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		4B328A8F1843385000FF084B = {
 			isa = PBXGroup;
 			children = (
+				4B265DC71848EC83002A9355 /* hosts.html */,
 				4B265DC51848D835002A9355 /* semantic.min.css */,
 				4BC710CC1846394300963077 /* status.html */,
 				4B328AA11843385000FF084B /* MongoMonitor */,
@@ -277,6 +280,7 @@
 				4BC710CD1846394300963077 /* status.html in Resources */,
 				4B265DC61848D835002A9355 /* semantic.min.css in Resources */,
 				4B328AA61843385000FF084B /* InfoPlist.strings in Resources */,
+				4B265DC81848EC83002A9355 /* hosts.html in Resources */,
 				4BB3AC0D18446726008E8538 /* MMInfoServerStatusViewController.xib in Resources */,
 				4BB3AC121844673D008E8538 /* MMInfoDBViewController.xib in Resources */,
 				4B328AAE1843385000FF084B /* Images.xcassets in Resources */,

@@ -51,18 +51,10 @@
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 
-// 加载html模板
-- (NSString *)loadHtmlTemplate:(NSString *)htmlFileName
-{
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:htmlFileName ofType:@"html"];
-    NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-    return htmlString;
-}
-
 // 渲染html模板
 - (NSString *)renderHtmlTemplate:(NSDictionary *)data
 {
-    NSString *template = [self loadHtmlTemplate:@"status"];
+    NSString *template = [MMUtils loadHtmlTemplate:@"status"];
     
     NSString *newStr = [template stringByReplacingOccurrencesOfString:@"{{ current }}" withString:[MMUtils toNSString:[[data objectForKey:@"connections"] objectForKey:@"current"]]];
     newStr = [newStr stringByReplacingOccurrencesOfString:@"{{ available }}" withString:[MMUtils toNSString:[[data objectForKey:@"connections"] objectForKey:@"available"]]];
@@ -110,8 +102,6 @@
     
     NSString *path = [[NSBundle mainBundle] bundlePath];
     NSURL *baseURL = [NSURL fileURLWithPath:path];
-    
-    NSLog(path);
     
     [self.statusWebView loadHTMLString:htmlString baseURL:baseURL];
 }
