@@ -39,6 +39,10 @@
     UINavigationController *dbViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:1];
     dbViewNavigationController.viewControllers = @[[[MMInfoDBViewController alloc] init]];
     
+    // Replication页面下的NavigationController
+    UINavigationController *replViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:2];
+    replViewNavigationController.viewControllers = @[[[MMInfoReplViewController alloc] init]];
+    
     // "更多"tab下的NavigationController
     UINavigationController *moreViewNavigationController = [[self.mainTabBarController viewControllers] objectAtIndex:3];
     moreViewNavigationController.viewControllers = @[[[MMInfoMoreViewController alloc] init]];

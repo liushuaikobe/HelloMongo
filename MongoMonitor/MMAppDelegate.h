@@ -10,6 +10,7 @@
 #import "MMInfoServerStatusViewController.h"
 #import "MMInfoMoreViewController.h"
 #import "MMInfoDBViewController.h"
+#import "MMInfoReplViewController.h"
 #import "MMSettingsViewController.h"
 
 @interface MMAppDelegate : UIResponder <UIApplicationDelegate>

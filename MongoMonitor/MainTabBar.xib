@@ -36,7 +36,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <nil key="simulatedDestinationMetrics"/>
                 </viewController>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="goi-4M-32m" customClass="MMInfoReplViewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="goi-4M-32m" customClass="UINavigationController">
                     <tabBarItem key="tabBarItem" title="Replication" id="44i-w5-tt7"/>
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>

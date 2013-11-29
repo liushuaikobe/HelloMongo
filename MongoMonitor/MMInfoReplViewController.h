@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMUtils.h"
 
 @interface MMInfoReplViewController : UIViewController
 
