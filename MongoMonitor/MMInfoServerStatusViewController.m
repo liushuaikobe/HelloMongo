@@ -107,7 +107,13 @@
 //    [MMUtils printDict:data];
     
     NSString *htmlString = [self renderHtmlTemplate:data];
-    [self.statusWebView loadHTMLString:htmlString baseURL:nil];
+    
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:path];
+    
+    NSLog(path);
+    
+    [self.statusWebView loadHTMLString:htmlString baseURL:baseURL];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

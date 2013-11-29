@@ -2,80 +2,47 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <style type="text/css">
-            <!--
-                .connections {
-                    background-color: orange;
-                    color: white;
-                }
-                .connections-label {
-                    font-size: 15px;
-                    font-style: italic;
-                    margin-left: 10px;
-                }
-                .current-connections-num, th, tr {
-                    font-size: 30px;
+            <link rel="stylesheet" type="text/css" class="ui" href="semantic.min.css">
+            <style type="text/css">
+                <!--
+                .current-connections-num {
                     text-align: center;
+                    font-size: 20px;
+                    font-family: 'Noteworthy-Bold';
                 }
-                .divider {
-                    background: white;
-                    height: 10px;
-                }
-                .lock {
-                    background-color: blue;
-                }
-                .mem {
-                    background: green;
-                }
-                .index {
-                    background: gray;
-                }
-                .opcounters {
-                    background: fuchsia;
-                }
-                table {
-                    margin: auto;
-                }
-            -->
-        </style>
-    </head>
+                </style>
+            </head>
     <body>
-        <div class="connections">
-            <div class="connections-label">connections</div>
-            <div class="current-connections-num">{{ current }} / {{ available }}</h2>
-        </div>
-        <div class="divider"></div>
-        <div class="lock">
-            <div class="connections-label">globalLock</div>
-            <div class="current-connections-num">{{ lockTime }} / {{ totalTime }}</div>
-        </div>
-        <div class="divider"></div>
-        <div class="mem">
-            <div class="connections-label">memory (resident / mapped / virtual)</div>
-            <div class="current-connections-num">{{ resident }} / {{ mapped }} / {{ virtual }}</div>
-        </div>
-        <div class="divider"></div>
-        <div class="index">
-            <div class="connections-label">index (hits / accesses)</div>
-            <div class="current-connections-num">{{ hits }} / {{ accesses }}</div>
-        </div>
-        <div class="divider"></div>
-        <div class="opcounters">
-            <div class="connections-label">opcounters</div>
-            <table border="1">
+        <div class="ui raised segment">
+            <div class="ui ribbon label">connections</div>
+            <div class="current-connections-num"><p>{{ current }} / {{ available }}</p></div>
+            
+            <div class="ui ribbon label">globalLock</div>
+            <div class="current-connections-num"><p>{{ lockTime }} / {{ totalTime }}</p></div>
+            
+            <div class="ui ribbon label">memory (r / m / v)</div>
+            <div class="current-connections-num"><p>{{ resident }} / {{ mapped }} / {{ virtual }}</p></div>
+            
+            <div class="ui ribbon label">index (hits / accesses)</div>
+            <div class="current-connections-num"><p>{{ hits }} / {{ accesses }}</p></div>
+            
+            <div class="ui ribbon label">opcounters</div>
+            <p>
+            <table class="ui basic table">
                 <tr>
-                    <th>C</th>
-                    <th>R</th>
-                    <th>U</th>
-                    <th>D</th>
+                    <td>Insert</td><td class="current-connections-num">{{ C }}</td>
                 </tr>
                 <tr>
-                    <td>{{ C }}</td>
-                    <td>{{ R }}</td>
-                    <td>{{ U }}</td>
-                    <td>{{ D }}</td>
+                    <td>Query</td><td class="current-connections-num">{{ R }}</td>
+                </tr>
+                <tr>
+                    <td>Update</td><td class="current-connections-num">{{ U }}</td>
+                </tr>
+                <tr>
+                    <td>Delete</td><td class="current-connections-num">{{ D }}</td>
                 </tr>
             </table>
+            </p>
         </div>
     </body>
 </html>
