@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <arpa/inet.h>
 
 static NSString* IP_DEFAULTS_KEY = @"db_ip_address";
 static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
@@ -33,5 +34,7 @@ static NSString* PORT_DEFAULTS_KEY = @"db_port_number";
 + (NSString *)get_ip_defaults_key;
 + (NSString *)get_port_defaults_key;
 + (NSString *)getUrlBase;
+
++ (void) showAlertDialogWithTitle:(NSString *)title content:(NSString *)val;
 
 @end

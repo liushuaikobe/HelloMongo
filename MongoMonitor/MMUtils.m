@@ -144,13 +144,23 @@
 // 判断IP地址是否合法
 + (BOOL)isRightIpAddress:(NSString *)ipStr
 {
-    return YES;
+    const char *utf8 = [ipStr UTF8String];
+    int success;
+    
+    struct in_addr dst;
+    success = inet_pton(AF_INET, utf8, &dst);
+    if (success != 1) {
+        struct in6_addr dst6;
+        success = inet_pton(AF_INET6, utf8, &dst6);
+    }
+    return (success == 1);
 }
 
 // 判断一个端口号是否合法
 + (BOOL)isRightPortNum:(NSString *)portStr
 {
-    return YES;
+    int p = [portStr intValue];
+    return p > 0 && p < 65536;
 }
 
 // 返回类变量
@@ -176,6 +186,13 @@
         return [[NSString alloc] initWithFormat:@"http://%@:%@", ipAddr, port];
     }
     return nil;
+}
+
+// 弹出对话框
++ (void) showAlertDialogWithTitle:(NSString *)title content:(NSString *)val
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:val delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

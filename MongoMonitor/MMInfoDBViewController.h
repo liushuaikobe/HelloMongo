@@ -17,6 +17,8 @@
 @property (retain) NSMutableArray *dbs;
 @property (retain) NSMutableArray *sizes;
 
+@property (retain) UIRefreshControl *refreshControl;
+
 // 自定义方法
 - (void) setDbsAndSizes:(NSDictionary *)data;
 

@@ -12,7 +12,9 @@
 @interface MMInfoMoreViewController : UIViewController<NSURLConnectionDelegate>
     
 @property (weak, nonatomic) IBOutlet UIWebView *moreInfoWebView;
-    
+
+@property (nonatomic) UIRefreshControl *refreshControl;
+
 @property (retain) NSMutableData *buf;
     
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;

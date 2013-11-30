@@ -45,12 +45,12 @@
     
     if (![MMUtils isRightIpAddress:ipAddr])
     {
-        // 弹出对话框
+        [MMUtils showAlertDialogWithTitle:@"Alert" content:@"Illegal IP Adress."];
         return ;
     }
     else if (![MMUtils isRightPortNum:port])
     {
-        // 弹出对话框
+        [MMUtils showAlertDialogWithTitle:@"Alert" content:@"Illegal Port Number."];
         return ;
     }
     

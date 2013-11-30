@@ -19,18 +19,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        
+        self.navigationItem.title = @"More";
+
         UIBarButtonItem *goSafari = [[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStylePlain target:self action:@selector(goSafari)];
         UIBarButtonItem *rightSettingBtn = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(presentSettingsViewControler)];
         
         self.navigationItem.leftBarButtonItem = goSafari;
         self.navigationItem.rightBarButtonItem = rightSettingBtn;
         
-        self.navigationItem.title = @"More";
         
         // 初始化一些实例变量
         self.buf = [[NSMutableData alloc] initWithLength:0];
-        
+        self.refreshControl = [[UIRefreshControl alloc] init];
     }
     return self;
 }
@@ -95,10 +95,11 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSLog(@"Request Finished.");
+    [self.refreshControl endRefreshing];
+    sleep(1);
+
     // 解析数据
     NSDictionary *data = [MMUtils parseJson:self.buf];
-    
-    // [MMUtils printDict:data];
     
     // 要在WebView上显示的信息
     NSMutableDictionary *usefulData = [[NSMutableDictionary alloc] initWithCapacity:15];
@@ -137,7 +138,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.moreInfoWebView setDataDetectorTypes:UIDataDetectorTypeNone];
     [self requestMoreInfo];
+    
+    [self.refreshControl addTarget:self action:@selector(requestMoreInfo) forControlEvents:UIControlEventValueChanged];
+    [self.moreInfoWebView.scrollView addSubview:self.refreshControl];
 }
 
 - (void)didReceiveMemoryWarning

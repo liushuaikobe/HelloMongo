@@ -30,6 +30,7 @@
         
         // 初始化一些实例变量
         self.buf = [[NSMutableData alloc] initWithLength:0];
+        self.refreshControl = [[UIRefreshControl alloc] init];
     }
     return self;
 }
@@ -44,6 +45,7 @@
 // 刷新当前数据
 - (void)refresh
 {
+//    [self.refreshControl beginRefreshing];
     NSString *url = [[NSString alloc] initWithFormat:@"%@/listDatabases", [MMUtils getUrlBase]];
     NSLog(@"Request: %@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
@@ -54,7 +56,7 @@
 - (void) setDbsAndSizes:(NSDictionary *)data
 {
     NSArray *dbArr = [data objectForKey:@"databases"];
-    int count = [dbArr count];
+    long count = [dbArr count];
     self.dbs = [[NSMutableArray alloc] initWithCapacity:count];
     self.sizes = [[NSMutableArray alloc] initWithCapacity:count];
     NSDictionary *db;
@@ -88,6 +90,7 @@
     [self setDbsAndSizes:data];
     // 更新UI
     [self.dbTableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -132,6 +135,9 @@
     self.dbTableView.delegate = self;
     // 刷新一次
     [self refresh];
+    
+    [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    [self.dbTableView addSubview:self.refreshControl];
 }
 
 - (void)didReceiveMemoryWarning

@@ -23,14 +23,14 @@
         self.navigationItem.title = @"Server Status";
         
         UIBarButtonItem *goSafari = [[UIBarButtonItem alloc] initWithTitle:@"More" style:UIBarButtonItemStylePlain target:self action:@selector(goSafari)];
-        UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
-        
+        UIBarButtonItem *refresh = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(refreshPage)];
         
         self.navigationItem.leftBarButtonItem = goSafari;
         self.navigationItem.rightBarButtonItem = refresh;
         
         // 初始化一些实例变量
         self.buf = [[NSMutableData alloc] initWithLength:0];
+        self.refreshControl = [[UIRefreshControl alloc] init];
     }
     return self;
 }
@@ -43,7 +43,7 @@
 }
 
 // 刷新当前数据
-- (void)refresh
+- (void)refreshPage
 {
     NSString *url = [[NSString alloc] initWithFormat:@"%@/serverStatus", [MMUtils getUrlBase]];
     NSLog(@"Request: %@", url);
@@ -93,10 +93,10 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSLog(@"Request Finished.");
+    [self.refreshControl endRefreshing];
+    sleep(1);
     // 解析数据
     NSDictionary *data = [MMUtils parseJson:self.buf];
-    
-//    [MMUtils printDict:data];
     
     NSString *htmlString = [self renderHtmlTemplate:data];
     
@@ -114,12 +114,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view from its nib.
     [self.statusWebView setDataDetectorTypes:UIDataDetectorTypeNone]; // 设置webview不自动检测电话号码、超链接等
     // 刷新一次
-    [self refresh];
+    [self refreshPage];
     
+    [self.refreshControl addTarget:self action:@selector(refreshPage) forControlEvents:UIControlEventValueChanged];
+    [self.statusWebView.scrollView addSubview:self.refreshControl];
 }
 
 - (void)didReceiveMemoryWarning

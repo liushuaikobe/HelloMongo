@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MMUtils.h"
 
-@interface MMInfoServerStatusViewController : UIViewController <NSURLConnectionDelegate>
+@interface MMInfoServerStatusViewController : UIViewController <NSURLConnectionDelegate, UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *statusWebView;
+
+@property (retain) UIRefreshControl *refreshControl;
+@property (nonatomic, retain) UIScrollView *currentScrollView;
 
 @property (retain) NSMutableData *buf;
 
