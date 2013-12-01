@@ -38,7 +38,7 @@
 // 用浏览器直接访问serverStatus
 - (void)goSafari
 {
-    NSString *urlStr = [[NSString alloc] initWithFormat:@"http://%@:%@/listDatabases?text=1", @"127.0.0.1", @"28017"];
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@/listDatabases?text=1", [MMUtils getUrlBase]];
     [MMUtils openUrlViaBrowser:urlStr];
 }
 
