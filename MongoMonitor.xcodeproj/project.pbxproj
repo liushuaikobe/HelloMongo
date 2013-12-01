@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B051669184AF84900B211B3 /* db.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051661184AF84900B211B3 /* db.png */; };
+		4B05166A184AF84900B211B3 /* db@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051662184AF84900B211B3 /* db@2x.png */; };
+		4B05166B184AF84900B211B3 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051663184AF84900B211B3 /* more.png */; };
+		4B05166C184AF84900B211B3 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051664184AF84900B211B3 /* more@2x.png */; };
+		4B05166D184AF84900B211B3 /* repl.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051665184AF84900B211B3 /* repl.png */; };
+		4B05166E184AF84900B211B3 /* repl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051666184AF84900B211B3 /* repl@2x.png */; };
+		4B05166F184AF84900B211B3 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051667184AF84900B211B3 /* status.png */; };
+		4B051670184AF84900B211B3 /* status@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B051668184AF84900B211B3 /* status@2x.png */; };
 		4B265DC61848D835002A9355 /* semantic.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4B265DC51848D835002A9355 /* semantic.min.css */; };
 		4B265DC81848EC83002A9355 /* hosts.html in Resources */ = {isa = PBXBuildFile; fileRef = 4B265DC71848EC83002A9355 /* hosts.html */; };
 		4B2C0DF51845C5E6003776CF /* MMSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C0DF31845C5E6003776CF /* MMSettingsViewController.m */; };
@@ -47,6 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B051661184AF84900B211B3 /* db.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = db.png; sourceTree = "<group>"; };
+		4B051662184AF84900B211B3 /* db@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "db@2x.png"; sourceTree = "<group>"; };
+		4B051663184AF84900B211B3 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		4B051664184AF84900B211B3 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		4B051665184AF84900B211B3 /* repl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = repl.png; sourceTree = "<group>"; };
+		4B051666184AF84900B211B3 /* repl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "repl@2x.png"; sourceTree = "<group>"; };
+		4B051667184AF84900B211B3 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
+		4B051668184AF84900B211B3 /* status@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "status@2x.png"; sourceTree = "<group>"; };
 		4B265DC51848D835002A9355 /* semantic.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = semantic.min.css; sourceTree = "<group>"; };
 		4B265DC71848EC83002A9355 /* hosts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = hosts.html; sourceTree = "<group>"; };
 		4B2C0DF21845C5E6003776CF /* MMSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSettingsViewController.h; sourceTree = "<group>"; };
@@ -110,9 +126,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B051660184AF78600B211B3 /* tabicons */ = {
+			isa = PBXGroup;
+			children = (
+				4B051661184AF84900B211B3 /* db.png */,
+				4B051662184AF84900B211B3 /* db@2x.png */,
+				4B051663184AF84900B211B3 /* more.png */,
+				4B051664184AF84900B211B3 /* more@2x.png */,
+				4B051665184AF84900B211B3 /* repl.png */,
+				4B051666184AF84900B211B3 /* repl@2x.png */,
+				4B051667184AF84900B211B3 /* status.png */,
+				4B051668184AF84900B211B3 /* status@2x.png */,
+			);
+			name = tabicons;
+			sourceTree = "<group>";
+		};
 		4B328A8F1843385000FF084B = {
 			isa = PBXGroup;
 			children = (
+				4B051660184AF78600B211B3 /* tabicons */,
 				4B265DC71848EC83002A9355 /* hosts.html */,
 				4B265DC51848D835002A9355 /* semantic.min.css */,
 				4BC710CC1846394300963077 /* status.html */,
@@ -280,14 +312,22 @@
 				4BC710CD1846394300963077 /* status.html in Resources */,
 				4B265DC61848D835002A9355 /* semantic.min.css in Resources */,
 				4B328AA61843385000FF084B /* InfoPlist.strings in Resources */,
+				4B051669184AF84900B211B3 /* db.png in Resources */,
 				4B265DC81848EC83002A9355 /* hosts.html in Resources */,
+				4B05166A184AF84900B211B3 /* db@2x.png in Resources */,
 				4BB3AC0D18446726008E8538 /* MMInfoServerStatusViewController.xib in Resources */,
 				4BB3AC121844673D008E8538 /* MMInfoDBViewController.xib in Resources */,
 				4B328AAE1843385000FF084B /* Images.xcassets in Resources */,
+				4B05166C184AF84900B211B3 /* more@2x.png in Resources */,
 				4BB3AC1718446752008E8538 /* MMInfoReplViewController.xib in Resources */,
+				4B05166E184AF84900B211B3 /* repl@2x.png in Resources */,
 				4BB3AC1C18446767008E8538 /* MMInfoMoreViewController.xib in Resources */,
 				4BB3AC081844620D008E8538 /* MainTabBar.xib in Resources */,
+				4B05166B184AF84900B211B3 /* more.png in Resources */,
+				4B05166D184AF84900B211B3 /* repl.png in Resources */,
 				4B2C0DF61845C5E6003776CF /* MMSettingsViewController.xib in Resources */,
+				4B051670184AF84900B211B3 /* status@2x.png in Resources */,
+				4B05166F184AF84900B211B3 /* status.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
